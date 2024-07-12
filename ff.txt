@@ -1,0 +1,5 @@
+set max min width on the car the biggest its aallowed to get smallest 
+so we dont have to change the width in a media query
+
+responsive grid without media queries
+grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));

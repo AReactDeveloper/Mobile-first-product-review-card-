@@ -1,0 +1,80 @@
+@use 'root';
+@use 'reset';
+@use 'base';
+@use 'utility';
+
+.product-card{
+    max-width: 600px;
+    min-height: 450px;
+    background-color: white;
+    margin-inline: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    &-photo{
+        & img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    &-inner{
+        display: grid;
+        margin: 24px 0;
+        padding: 0 25px;
+        &-photo img{
+            width: 100%;
+            height: 100%;
+        }
+        &-category{
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+        &-title{
+            color: #1b222a;
+            font-weight: 700;
+            font-size: 1.875rem;
+            font-family: var(--secondary-font);
+            font-weight: bold;
+            margin-top: 10px;
+            line-height: 1.10;
+            letter-spacing: 0.063rem;
+        }
+        &-description{
+            color: #6c6e7a;
+            margin-top: 18px;
+            font-size: 0.938rem;
+            line-height: 1.5;
+            word-spacing: 2PX;
+            letter-spacing: 1.9;
+        }
+        &-price{
+            margin-top: 20px;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            &-price{
+                color: var(--clr-green);
+                font-size: 1.875rem;
+                font-weight: bold;
+                font-family: var(--secondary-font);
+                letter-spacing: 1.9px;
+                margin-right: 15px;
+
+            }
+            &-discount{
+                font-size: 0.875rem ;
+                color: #686870 ;
+                text-decoration: line-through;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    /* CSS rules here will apply for viewports 370px wide or less */
+    .product-card{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
