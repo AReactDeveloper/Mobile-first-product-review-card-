@@ -16,11 +16,10 @@
     <div class="product-card">
 
       <div class="product-card-photo">
-        <img
-          src="./images/image-product-desktop.jpg"
-          srcset="./images/image-product-desktop.jpg 1500w,
-                  ./images/image-product-mobile.jpg 1000w"
-          alt="Product Card Perfume" />
+          <picture>
+            <source srcset="./images/image-product-mobile.jpg" media="(max-width: 600px)" />
+            <img src="./images/image-product-desktop.jpg" alt="MDN" />
+          </picture>
       </div>
 
       <div class="product-card-inner">
